@@ -1,0 +1,48 @@
+.reply_comment {
+  border-left: 2px solid #54a1d4;
+
+  font-weight: 400;
+  padding-left: 20px;
+  margin-left: 2px;
+}
+
+.reply_content > p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 19px;
+}
+
+.ava {
+  width: 35px;
+  height: 35px;
+  margin-left: 0px;
+  border-radius: 50%;
+}
+.reply-avatar {
+  align-items: center;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.reply-avatar img {
+  border-radius: 50%;
+  display: inline-flex;
+  height: inherit;
+  width: inherit;
+  object-fit: cover;
+}
+
+.username {
+  display: inline;
+  margin-left: 15px;
+}
+
+.date {
+  display: inline-flex;
+  margin-left: 10px;
+  font-weight: 400;
+  font-size: 12px;
+}

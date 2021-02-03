@@ -1,0 +1,67 @@
+.flex-container-toolbar {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20%;
+  background-color: white;
+
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  margin-bottom: 20%;
+}
+
+.flex-container-buttons-1 {
+  order: 3;
+  display: flex;
+  width: 15rem;
+
+  justify-content: space-around;
+}
+
+.flex-container-buttons-2 {
+  order: 3;
+  display: flex;
+  width: 30rem;
+
+  justify-content: space-around;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  order: 2;
+  width: 30%;
+  height: auto;
+}
+
+.logo:hover > img {
+  cursor: pointer;
+}
+
+.toolbar-text {
+  order: 2;
+  color: white;
+  text-align: center;
+}
+
+.toolbar-left {
+  order: 1;
+  width: 25rem;
+  text-align: center;
+  margin-right: 7vh;
+}
+
+.toolbar-left-placeholder {
+  order: 1;
+  width: 10rem;
+}
+
+.toolbar-modal-wrapper {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+}

@@ -1,0 +1,63 @@
+.grid-container-editpost {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-auto-rows: minmax(90px, auto);
+
+  align-content: center;
+  /* height: 50vh; */
+  justify-content: center;
+}
+
+.grid-item-form {
+  /* grid-column: 2;
+  grid-row: 2 / 3; */
+
+  /* justify-self: center; */
+  align-self: center;
+}
+
+.grid-item-old-values {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.grid-item-image {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.grid-item-image > img {
+  max-width: 70%;
+  max-height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.editPostModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  overflow: auto;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 50px;
+  z-index: 1001;
+  width: 110vh;
+  max-height: 70vh;
+}
+
+.overlayStyles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1001;
+}
+
+.collection-folders {
+  overflow: auto;
+  max-height: 40vh;
+}

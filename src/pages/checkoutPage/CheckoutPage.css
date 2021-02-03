@@ -1,0 +1,42 @@
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 2.5fr 1.5fr;
+  grid-column-gap: 1em;
+  grid-auto-rows: minmax(50px, auto);
+
+  align-content: start;
+  justify-content: center;
+  width: 1100px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.checkout-wrapper > h1 {
+  text-align: center;
+  margin: 50px auto;
+}
+
+.payment-info {
+  /* border: #333 1px solid; */
+
+  /* height: 500px;
+  margin: 30px; */
+}
+
+.purchase-info {
+  display: flex;
+  flex-direction: column;
+  border: #333 1px solid;
+  margin: 30px;
+  padding: 20px;
+  overflow: auto;
+  height: 55vh;
+}
+
+.cart-details-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 1em;
+  grid-auto-rows: minmax(50px, auto);
+  margin-bottom: 30%;
+}

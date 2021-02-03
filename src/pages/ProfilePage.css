@@ -1,0 +1,26 @@
+.dp-photo {
+  display: flex;
+  align-items: center;
+  /* border-color: rgb(255, 255, 255); */
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  /* border: solid; */
+  text-align: center;
+  justify-content: center;
+  margin: 30px;
+  padding: 2%;
+  overflow: hidden;
+}
+
+.dp-photo-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.dp-photo > img {
+  max-width: 200%;
+  max-height: auto;
+  height: auto;
+  object-fit: cover;
+}
