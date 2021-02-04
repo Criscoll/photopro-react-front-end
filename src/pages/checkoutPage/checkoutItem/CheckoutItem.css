@@ -1,0 +1,28 @@
+.shopping-item {
+  border: #333 1px solid;
+  margin: 5px;
+  padding: 3%;
+  max-height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.image > img {
+  width: 150px;
+  height: auto;
+}
+
+.shopping-item-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1em;
+  grid-auto-rows: minmax(10px, auto);
+}
+
+.image-info > h2 {
+  font-size: 100%;
+}
+
+.image-info > h3 {
+  font-size: 100%;
+}

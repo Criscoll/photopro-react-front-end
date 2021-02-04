@@ -1,0 +1,9 @@
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(100px, 20%));
+  grid-auto-rows: minmax(5px, auto);
+  column-gap: 1ch;
+  row-gap: 2ch;
+
+  justify-content: center;
+}

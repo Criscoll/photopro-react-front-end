@@ -1,0 +1,131 @@
+@font-face {
+  font-family: 'Roboto';
+  /* font-style: normal; */
+  /* font-weight: 400; */
+  src: local('Lato'), url(../../fonts/Roboto/Roboto-Thin.ttf) format('truetype');
+}
+
+.roboto {
+  font-family: 'Roboto';
+  color: rgba(73, 69, 69, 1);
+}
+
+.postWrapper {
+  display: grid;
+  grid-template-columns: 0.7fr 4fr 2fr;
+  grid-column-gap: 1em;
+  grid-auto-rows: minmax(50px, auto);
+}
+
+.postWrapper > div {
+  /* background: #eee; */
+  padding: 1em;
+}
+
+.postImage {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  max-width: 100%;
+}
+
+.main-img > img {
+  justify-content: center;
+  margin-top: 4%;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.postInfo {
+  display: grid;
+  grid-row: auto / span 2;
+
+  position: sticky;
+  top: 0;
+
+  justify-content: center;
+  align-items: center;
+  max-height: 30vh;
+}
+
+.username {
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.username-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.bookmark-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.postFeed-nested {
+  display: grid;
+}
+
+.postTags {
+  padding: 15px;
+  border-bottom: rgb(165, 165, 165) 1px solid;
+}
+
+.postPrice {
+  padding: 15px;
+  border-bottom: rgb(165, 165, 165) 1px solid;
+}
+
+.postComments {
+  padding: 15px;
+}
+
+.recImages-nested {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1em;
+  grid-auto-rows: minmax(100px, auto);
+  justify-items: center;
+  align-content: start;
+}
+
+.recImage {
+  border: #333 1px solid;
+  padding: 1em;
+  width: 30vh;
+  height: 50vh;
+
+  max-width: 40vh;
+  max-height: 50vh;
+  overflow: hidden;
+}
+
+.recImage:hover > img {
+  cursor: pointer;
+}
+
+.recImage > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recImages-nested > h1 {
+  margin-top: 10%;
+  margin-bottom: 4%;
+  grid-column: auto / span 3;
+  justify-self: center;
+  align-self: top;
+  /* background: rgb(195, 151, 204); */
+}
+
+.flexbox-tags {
+  display: flex;
+  flex-wrap: wrap;
+}
