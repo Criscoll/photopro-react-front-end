@@ -29,7 +29,7 @@ function Likes(props) {
   useEffect(() => {
     axios({
       method: 'GET',
-      url: 'http://localhost:5000/get_num_likes_of_image',
+      url: 'https://photo-pro.herokuapp.com//get_num_likes_of_image',
       params: { image_id: imageID },
     }).then((response) => {
       if (response.data.result !== false) {
@@ -48,7 +48,7 @@ function Likes(props) {
   useEffect(() => {
     const checkIfLiked = () => {
       axios({
-        url: 'http://localhost:5000/check_if_user_liked_photo',
+        url: 'https://photo-pro.herokuapp.com//check_if_user_liked_photo',
         params: { image_id: imageID },
       }).then((response) => {
         console.log(response);
@@ -74,7 +74,7 @@ function Likes(props) {
 
   const sendLikeNotification = () => {
     axios({
-      url: 'http://localhost:5000/send_notification',
+      url: 'https://photo-pro.herokuapp.com//send_notification',
       params: {
         uploader_id: props.uploader_id,
         notification: 'like',
@@ -89,7 +89,7 @@ function Likes(props) {
     const updateLikeRecommendation = () => {
       axios({
         method: 'GET',
-        url: 'http://localhost:5000/update_likes_recommendation',
+        url: 'https://photo-pro.herokuapp.com//update_likes_recommendation',
         params: { image_id: imageID },
       }).then((res) => {
         console.log(res);
@@ -98,7 +98,7 @@ function Likes(props) {
 
     axios({
       method: 'GET',
-      url: 'http://localhost:5000/post_like_to_image',
+      url: 'https://photo-pro.herokuapp.com//post_like_to_image',
       params: { image_id: imageID },
     }).then((response) => {
       console.log(response);
@@ -114,7 +114,7 @@ function Likes(props) {
   const delete_likes = () => {
     axios({
       method: 'POST',
-      url: 'http://localhost:5000/delete_like_from_image',
+      url: 'https://photo-pro.herokuapp.com//delete_like_from_image',
       params: { image_id: imageID },
     }).then((response) => {
       if (response.data.result) {

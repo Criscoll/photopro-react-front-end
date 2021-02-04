@@ -30,7 +30,7 @@ const PostInfo = (props) => {
     const fetchTags = (id) => {
       axios({
         method: 'GET',
-        url: 'http://localhost:5000/get_tags',
+        url: 'https://photo-pro.herokuapp.com//get_tags',
         params: { image_id: id },
         cancelToken: new axios.CancelToken(
           (c) => (cancelAxiosRequest.current = c)
@@ -48,7 +48,7 @@ const PostInfo = (props) => {
     const fetchRelatedImgs = (id) => {
       axios({
           method: 'GET',
-          url: 'http://localhost:5000/get_related_images',
+          url: 'https://photo-pro.herokuapp.com//get_related_images',
           params: { image_id: id}, //user_id: 1
 
         }).then((res) => {
@@ -59,7 +59,7 @@ const PostInfo = (props) => {
     const fetchComments = (id) => {
       axios({
         method: 'GET',
-        url: 'http://localhost:5000/get_comments_to_image',
+        url: 'https://photo-pro.herokuapp.com//get_comments_to_image',
         params: { image_id: id, batch_size: 20 },
         cancelToken: new axios.CancelToken(
           (c) => (cancelAxiosRequest.current = c)
@@ -87,7 +87,7 @@ const PostInfo = (props) => {
   const apiAddPurchase = (imageID) => {
     axios({
       method: 'POST',
-      url: 'http://localhost:5000/add_purchase',
+      url: 'https://photo-pro.herokuapp.com//add_purchase',
       params: {
         save_for_later: 0,
         purchased: 0,

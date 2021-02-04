@@ -13,7 +13,7 @@ export default function ReplyComments(props) {
     const getReplies = () => {
       axios({
         method: 'GET',
-        url: 'http://localhost:5000/get_comments_to_comment',
+        url: 'https://photo-pro.herokuapp.com//get_comments_to_comment',
         params: {
           comment_id: comment_id,
           batch_size: 10,

@@ -30,7 +30,7 @@ export default function DeleteAccountModal(props) {
   const handleDeleteAccountClickedApi = () => {
     axios({
       method: 'POST',
-      url: 'http://localhost:5000/delete_user',
+      url: 'https://photo-pro.herokuapp.com//delete_user',
       params: {
         email: email,
         password: password,

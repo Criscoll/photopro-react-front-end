@@ -31,7 +31,7 @@ export default function Collections(props) {
 
   useEffect(() => {
     axios({
-      url: 'http://localhost:5000/get_user_username',
+      url: 'https://photo-pro.herokuapp.com//get_user_username',
       params: { user_id: userID },
     }).then((response) => {
       if (response.data.result) {
@@ -39,7 +39,7 @@ export default function Collections(props) {
       }
     });
     axios({
-      url: 'http://localhost:5000/get_user_email',
+      url: 'https://photo-pro.herokuapp.com//get_user_email',
       params: { user_id: userID },
     }).then((response) => {
       if (response.data.result) {
@@ -53,7 +53,7 @@ export default function Collections(props) {
     const getUsersCollections = () => {
       axios({
         method: 'GET',
-        url: 'http://localhost:5000/get_users_collection',
+        url: 'https://photo-pro.herokuapp.com//get_users_collection',
         params: {
           user_id: userID,
           batch_size: 20,
@@ -86,7 +86,7 @@ export default function Collections(props) {
   const getProfilePhoto = () => {
     axios({
       method: 'GET',
-      url: 'http://localhost:5000/get_profile_photo',
+      url: 'https://photo-pro.herokuapp.com//get_profile_photo',
       params: {
         user_id: userID,
       },

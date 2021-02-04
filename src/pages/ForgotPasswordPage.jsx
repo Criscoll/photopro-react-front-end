@@ -16,7 +16,7 @@ export default function ForgotPasswordPage() {
     event.preventDefault();
 
     var response = await axios.get(
-      'http://localhost:5000/forgot_password_get_change_password_link',
+      'https://photo-pro.herokuapp.com//forgot_password_get_change_password_link',
       {
         params: { email: email },
       }

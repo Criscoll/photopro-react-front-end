@@ -13,7 +13,7 @@ import AddedToCartModal from '../../Modals/AddedToCartModal/AddedToCartModal';
 import EditPostModal from '../../Modals/EditPostModal/EditPostModal';
 
 const deletePostRequest = async function (imageID) {
-  const response = await axios.get('http://localhost:5000/delete_image_post', {
+  const response = await axios.get('https://photo-pro.herokuapp.com//delete_image_post', {
     params: { image_id: String(imageID) }, //user_id: 1
   });
 
@@ -165,7 +165,7 @@ class ImageCard extends Component {
     const apiAddToCart = (imageID, setModal, setCartStatus) => {
       axios({
         method: 'POST',
-        url: 'http://localhost:5000/add_purchase',
+        url: 'https://photo-pro.herokuapp.com//add_purchase',
         params: {
           save_for_later: 0,
           purchased: 0,
@@ -182,7 +182,7 @@ class ImageCard extends Component {
     const apiRemoveFromCart = (imageID, setModal, setCartStatus) => {
       axios({
         method: 'POST',
-        url: 'http://localhost:5000/delete_item_from_cart',
+        url: 'https://photo-pro.herokuapp.com//delete_item_from_cart',
         params: {
           image_id: String(imageID),
         },
@@ -195,7 +195,7 @@ class ImageCard extends Component {
     };
 
     axios({
-      url: 'http://localhost:5000/item_is_in_cart',
+      url: 'https://photo-pro.herokuapp.com//item_is_in_cart',
       params: { image_id: this.props.image.id },
     }).then((response) => {
       if (!response.data.result) {

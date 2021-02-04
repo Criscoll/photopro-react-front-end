@@ -22,7 +22,7 @@ export default function LoginModal(props) {
   async function attempt_login(event) {
     event.preventDefault();
 
-    const response = await axios.get('http://localhost:5000/login', {
+    const response = await axios.get('https://photo-pro.herokuapp.com//login', {
       params: { email: email, password: password },
     });
 

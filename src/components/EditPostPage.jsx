@@ -21,7 +21,7 @@ export default function EditPostPage() {
   async function edit_post(event) {
     event.preventDefault();
 
-    var response = await axios.get('http://localhost:5000/edit_post', {
+    var response = await axios.get('https://photo-pro.herokuapp.com//edit_post', {
       params: { title: title, price: price, caption: caption },
     });
     console.log(response);

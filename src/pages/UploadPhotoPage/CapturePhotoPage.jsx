@@ -20,7 +20,7 @@ async function attemptPost(img, title, caption, price, tags) {
   form_data.append('price', price);
   form_data.append('tags', tags);
 
-  const response = await axios.post('http://localhost:5000/post', form_data);
+  const response = await axios.post('https://photo-pro.herokuapp.com//post', form_data);
   return response;
 }
 

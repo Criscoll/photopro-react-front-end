@@ -29,7 +29,7 @@ export default function PostModal(props) {
 
   useEffect(() => {
     axios({
-      url: 'http://localhost:5000/get_user_username',
+      url: 'https://photo-pro.herokuapp.com//get_user_username',
       params: { user_id: props.uploader },
     }).then((response) => {
       if (response.data.result) {
@@ -38,7 +38,7 @@ export default function PostModal(props) {
     });
 
     axios({
-      url: 'http://localhost:5000/item_is_in_cart',
+      url: 'https://photo-pro.herokuapp.com//item_is_in_cart',
       params: { image_id: imageID },
     }).then((response) => {
       if (response.data.result) {
@@ -47,7 +47,7 @@ export default function PostModal(props) {
     });
 
     axios({
-      url: 'http://localhost:5000/get_user_email',
+      url: 'https://photo-pro.herokuapp.com//get_user_email',
       params: { user_id: props.uploader },
     }).then((response) => {
       if (response.data.result) {
@@ -56,7 +56,7 @@ export default function PostModal(props) {
     });
 
     axios({
-      url: 'http://localhost:5000/get_related_images',
+      url: 'https://photo-pro.herokuapp.com//get_related_images',
       params: { image_id: imageID },
     }).then((response) => {
       console.log('~~~~~~~~~~~~Get Related Images~~~~~~~~~~~');
@@ -78,7 +78,7 @@ export default function PostModal(props) {
     const fetchTags = (id) => {
       axios({
         method: 'GET',
-        url: 'http://localhost:5000/get_tags',
+        url: 'https://photo-pro.herokuapp.com//get_tags',
         params: { image_id: id },
         cancelToken: new axios.CancelToken(
           (c) => (cancelAxiosRequest.current = c)
@@ -95,7 +95,7 @@ export default function PostModal(props) {
     const fetchComments = (id) => {
       axios({
         method: 'GET',
-        url: 'http://localhost:5000/get_comments_to_image',
+        url: 'https://photo-pro.herokuapp.com//get_comments_to_image',
         params: { image_id: id, batch_size: 20 },
         cancelToken: new axios.CancelToken(
           (c) => (cancelAxiosRequest.current = c)
@@ -120,7 +120,7 @@ export default function PostModal(props) {
   const apiAddPurchase = (imageID) => {
     axios({
       method: 'POST',
-      url: 'http://localhost:5000/add_purchase',
+      url: 'https://photo-pro.herokuapp.com//add_purchase',
       params: {
         save_for_later: 0,
         purchased: 0,
@@ -138,7 +138,7 @@ export default function PostModal(props) {
   const apiRemovePurchase = (imageID) => {
     axios({
       method: 'POST',
-      url: 'http://localhost:5000/delete_item_from_cart',
+      url: 'https://photo-pro.herokuapp.com//delete_item_from_cart',
       params: {
         image_id: String(imageID),
       },

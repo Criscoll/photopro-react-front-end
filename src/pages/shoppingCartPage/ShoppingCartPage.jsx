@@ -22,7 +22,7 @@ export default function ShoppingCart() {
   const getUserNotPurchasedItems = () => {
     axios({
       method: 'GET',
-      url: 'http://localhost:5000/get_user_purchases',
+      url: 'https://photo-pro.herokuapp.com//get_user_purchases',
       params: {
         save_for_later: 0,
         purchased: 0,
@@ -40,7 +40,7 @@ export default function ShoppingCart() {
   const getUserSavedLaterItems = () => {
     axios({
       method: 'GET',
-      url: 'http://localhost:5000/get_user_purchases',
+      url: 'https://photo-pro.herokuapp.com//get_user_purchases',
       params: {
         save_for_later: 1,
         purchased: 0,

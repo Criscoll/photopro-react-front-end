@@ -17,7 +17,7 @@ export default function Notifications() {
   const handleClick = (event) => {
     const fetchNotifications = () => {
       axios({
-        url: 'http://localhost:5000/fetch_notification',
+        url: 'https://photo-pro.herokuapp.com//fetch_notification',
         params: {},
       }).then((res) => {
         console.log(res);
@@ -40,7 +40,7 @@ export default function Notifications() {
     console.log('clear notifications');
     const clearNotifications = () => {
       axios({
-        url: 'http://localhost:5000/clear_notifications',
+        url: 'https://photo-pro.herokuapp.com//clear_notifications',
         params: {},
       }).then((res) => {
         console.log(res);

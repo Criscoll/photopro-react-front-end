@@ -129,7 +129,7 @@ class CollectionImage extends Component {
     const apiAddToCart = (imageID, setModal, setCartStatus) => {
       axios({
         method: 'POST',
-        url: 'http://localhost:5000/add_purchase',
+        url: 'https://photo-pro.herokuapp.com//add_purchase',
         params: {
           save_for_later: 0,
           purchased: 0,
@@ -146,7 +146,7 @@ class CollectionImage extends Component {
     const apiRemoveFromCart = (imageID, setModal, setCartStatus) => {
       axios({
         method: 'POST',
-        url: 'http://localhost:5000/delete_item_from_cart',
+        url: 'https://photo-pro.herokuapp.com//delete_item_from_cart',
         params: {
           image_id: String(imageID),
         },
@@ -159,7 +159,7 @@ class CollectionImage extends Component {
     };
 
     axios({
-      url: 'http://localhost:5000/item_is_in_cart',
+      url: 'https://photo-pro.herokuapp.com//item_is_in_cart',
       params: { image_id: this.props.image.id },
     }).then((response) => {
       console.log(response);
@@ -187,7 +187,7 @@ class CollectionImage extends Component {
     const deletePhotoFromCollection = () => {
       axios({
         method: 'GET',
-        url: 'http://localhost:5000/delete_photo_from_collection',
+        url: 'https://photo-pro.herokuapp.com//delete_photo_from_collection',
         params: { collection_id: this.collection_id, image_id: this.image_id }, //user_id: 1
       }).then((res) => {
         console.log(res);

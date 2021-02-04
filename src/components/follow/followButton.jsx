@@ -11,7 +11,7 @@ const FollowButton = (props) => {
     const checkIfFollowing = () => {
       axios({
         method: 'GET',
-        url: 'http://localhost:5000/is_following',
+        url: 'https://photo-pro.herokuapp.com//is_following',
         params: { following: props.uploader },
       }).then((response) => {
         console.log(response);
@@ -35,7 +35,7 @@ const FollowButton = (props) => {
     const follow = () => {
       axios({
         method: 'POST',
-        url: 'http://localhost:5000/follow',
+        url: 'https://photo-pro.herokuapp.com//follow',
         params: { to_follow: props.uploader },
       }).then((response) => {
         console.log(response);
@@ -50,7 +50,7 @@ const FollowButton = (props) => {
     const unfollow = () => {
       axios({
         method: 'POST',
-        url: 'http://localhost:5000/unfollow',
+        url: 'https://photo-pro.herokuapp.com//unfollow',
         params: { following: props.uploader },
       }).then((response) => {
         console.log(response);

@@ -21,7 +21,7 @@ export default function CollectionDataPage(props) {
 
   useEffect(() => {
     axios({
-      url: 'http://localhost:5000/get_user_username',
+      url: 'https://photo-pro.herokuapp.com//get_user_username',
       params: { user_id: props.location.state.creator_id },
     }).then((response) => {
       if (response.data.result) {
@@ -46,7 +46,7 @@ export default function CollectionDataPage(props) {
     const getCollectionsById = () => {
       axios({
         method: 'GET',
-        url: 'http://localhost:5000/get_collection_data',
+        url: 'https://photo-pro.herokuapp.com//get_collection_data',
         params: {
           collection_id: collectionID,
         },
@@ -64,7 +64,7 @@ export default function CollectionDataPage(props) {
   const deleteCollection = () => {
     axios({
       method: 'POST',
-      url: 'http://localhost:5000/delete_collection',
+      url: 'https://photo-pro.herokuapp.com//delete_collection',
       params: {
         collection_id: props.location.state.collection_id,
       },
@@ -79,7 +79,7 @@ export default function CollectionDataPage(props) {
   const updateCollectionsPrivate = (privValue) => {
     axios({
       method: 'POST',
-      url: 'http://localhost:5000/update_collections_private',
+      url: 'https://photo-pro.herokuapp.com//update_collections_private',
       params: {
         collection_id: props.location.state.collection_id,
         private: privValue,

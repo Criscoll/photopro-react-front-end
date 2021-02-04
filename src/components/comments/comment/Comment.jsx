@@ -18,7 +18,7 @@ export default function Comment(props) {
   const getProfilePhoto = () => {
     axios({
       method: 'GET',
-      url: 'http://localhost:5000/get_profile_photo',
+      url: 'https://photo-pro.herokuapp.com//get_profile_photo',
       params: {
         user_id: props.comment_info.commenter,
       },
@@ -43,7 +43,7 @@ export default function Comment(props) {
   const deleteComment = (commentID) => {
     axios({
       method: 'POST',
-      url: 'http://localhost:5000/post_delete_comment',
+      url: 'https://photo-pro.herokuapp.com//post_delete_comment',
       params: { comment_id: commentID },
     }).then((response) => {
       if (response.data.result) {
@@ -84,7 +84,7 @@ export default function Comment(props) {
   const post_reply_comments = (reply_input) => {
     axios({
       method: 'POST',
-      url: 'http://localhost:5000/post_comment_to_comment',
+      url: 'https://photo-pro.herokuapp.com//post_comment_to_comment',
       params: {
         comment_id: props.comment_info.comment_id,
         comment: reply_input,
@@ -102,7 +102,7 @@ export default function Comment(props) {
     });
     axios({
       method: 'GET',
-      url: 'http://localhost:5000/update_comment_recommendation',
+      url: 'https://photo-pro.herokuapp.com//update_comment_recommendation',
       params: { image_id: props.comment_info.image_id }, //user_id: 1
     }).then((res) => {
       console.log(res);

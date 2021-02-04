@@ -58,7 +58,7 @@ const RecommendationFeed = () => {
     console.log(`fetching recommendation with a score of ${score}`);
     axios({
       method: 'GET',
-      url: 'http://localhost:5000/get_recommended_images',
+      url: 'https://photo-pro.herokuapp.com//get_recommended_images',
       params: { score: score, batch_size: 10 },
       cancelToken: new axios.CancelToken(
         (c) => (cancelAxiosRequest.current = c)

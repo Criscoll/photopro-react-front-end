@@ -14,7 +14,7 @@ export default function MyPurchases() {
   const getUserNotPaidItems = () => {
     axios({
       method: "GET",
-      url: "http://localhost:5000/get_user_purchases",
+      url: "https://photo-pro.herokuapp.com//get_user_purchases",
       params: {
         save_for_later: 0,
         purchased: 1,

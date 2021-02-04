@@ -7,7 +7,7 @@ export default function ShoppingItem(props) {
   const updatePurchase = (save_later_value) => {
     axios({
       method: "POST",
-      url: "http://localhost:5000/update_user_purchases_details",
+      url: "https://photo-pro.herokuapp.com//update_user_purchases_details",
       params: {
         save_for_later: save_later_value,
         purchased: 0,
@@ -24,7 +24,7 @@ export default function ShoppingItem(props) {
   const deleteItem = () => {
     axios({
       method: "POST",
-      url: "http://localhost:5000/delete_item_from_cart",
+      url: "https://photo-pro.herokuapp.com//delete_item_from_cart",
       params: {
         image_id: props.image_id,
       },

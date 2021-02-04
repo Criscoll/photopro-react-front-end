@@ -35,7 +35,7 @@ export default function RegistrationPage() {
   async function attempt_registration(event) {
     event.preventDefault();
 
-    const response = await axios.get("http://localhost:5000/create_user", {
+    const response = await axios.get("https://photo-pro.herokuapp.com//create_user", {
       params: {
         email: email,
         password: password,
@@ -45,7 +45,7 @@ export default function RegistrationPage() {
       },
     });
     console.log(response);
-    // const verify_response = await axios.get('http://localhost:5000/verify_email', {
+    // const verify_response = await axios.get('https://photo-pro.herokuapp.com//verify_email', {
     //   params: { email: email },
     // });
 

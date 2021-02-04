@@ -33,7 +33,7 @@ export default function RegistrationPage(props) {
       setverifyLoading(true);
       axios({
         method: 'POST',
-        url: 'http://localhost:5000/verify_email',
+        url: 'https://photo-pro.herokuapp.com//verify_email',
         params: {
           email: emailValidated[1],
         },
@@ -69,7 +69,7 @@ export default function RegistrationPage(props) {
     setLoading(true);
     axios({
       method: 'POST',
-      url: 'http://localhost:5000/create_user',
+      url: 'https://photo-pro.herokuapp.com//create_user',
       params: {
         email: emailValidated[1],
         password: passwordValidated[1],

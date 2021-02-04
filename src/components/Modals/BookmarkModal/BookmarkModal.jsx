@@ -33,7 +33,7 @@ export default function BookmarkModal(props) {
       const userID = localStorage.getItem('userID');
       axios({
         method: 'GET',
-        url: 'http://localhost:5000/get_users_collection',
+        url: 'https://photo-pro.herokuapp.com//get_users_collection',
         params: {
           user_id: userID,
           batch_size: 20,
@@ -52,7 +52,7 @@ export default function BookmarkModal(props) {
   const addPhotoToCollections = (col_id) => {
     axios({
       method: 'POST',
-      url: 'http://localhost:5000/add_photo_to_collection',
+      url: 'https://photo-pro.herokuapp.com//add_photo_to_collection',
       params: {
         collection_id: col_id,
         image_id: props.photoId,
@@ -75,7 +75,7 @@ export default function BookmarkModal(props) {
     const createCollections = () => {
       axios({
         method: 'POST',
-        url: 'http://localhost:5000/create_collection',
+        url: 'https://photo-pro.herokuapp.com//create_collection',
         params: {
           collection_name: enteredCollection,
           private: privateCollection,

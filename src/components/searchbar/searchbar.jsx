@@ -19,7 +19,7 @@ function SearchBar() {
     if (query !== null) {
       const updateSearchRecommendation = () => {
         axios({
-          url: 'http://localhost:5000/update_search_recommendation',
+          url: 'https://photo-pro.herokuapp.com//update_search_recommendation',
           params: { query: query },
         }).then((response) => {
           console.log(response);

@@ -38,7 +38,7 @@ export default function Comments(props) {
 
   const sendCommentNotification = () => {
     axios({
-      url: 'http://localhost:5000/send_notification',
+      url: 'https://photo-pro.herokuapp.com//send_notification',
       params: {
         uploader_id: props.uploader_id,
         notification: 'comment',
@@ -55,7 +55,7 @@ export default function Comments(props) {
     const updateCommentRecommendation = () => {
       axios({
         method: 'GET',
-        url: 'http://localhost:5000/update_comment_recommendation',
+        url: 'https://photo-pro.herokuapp.com//update_comment_recommendation',
         params: { image_id: props.image_id },
       }).then((res) => {
         console.log(res);
@@ -64,7 +64,7 @@ export default function Comments(props) {
 
     axios({
       method: 'POST',
-      url: 'http://localhost:5000/post_comment_to_image',
+      url: 'https://photo-pro.herokuapp.com//post_comment_to_image',
       params: { comment: comment_input, image_id: props.image_id },
     }).then((response) => {
       console.log(response);

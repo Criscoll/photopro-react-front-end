@@ -34,12 +34,12 @@ export default function ChangePasswordPage() {
   async function attempt_password_change(event) {
     event.preventDefault();
 
-    var response = await axios.get('http://localhost:5000/login', {
+    var response = await axios.get('https://photo-pro.herokuapp.com//login', {
       params: { email: email, password: password },
     });
     console.log(response);
     if (response.data.result) {
-      response = await axios.get('http://localhost:5000/change_password', {
+      response = await axios.get('https://photo-pro.herokuapp.com//change_password', {
         params: {
           email: email,
           password: password,

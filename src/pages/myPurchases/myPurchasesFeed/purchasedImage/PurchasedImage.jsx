@@ -86,7 +86,7 @@ class PurchasedImage extends Component {
     const downloadPhoto = () => {
       axios({
         method: 'GET',
-        url: 'http://localhost:5000/download',
+        url: 'https://photo-pro.herokuapp.com//download',
         params: { image_id: this.props.image.image_id },
       }).then((res) => {
         console.log(res);

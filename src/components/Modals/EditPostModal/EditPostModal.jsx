@@ -34,7 +34,7 @@ export default function EditPostPage(props) {
 
   useEffect(() => {
     axios({
-      url: 'http://localhost:5000/get_tags',
+      url: 'https://photo-pro.herokuapp.com//get_tags',
       params: { image_id: props.imageID },
     }).then((res) => {
       console.log(res);
@@ -54,7 +54,7 @@ export default function EditPostPage(props) {
   async function edit_post() {
     // event.preventDefault();
 
-    var response = await axios.get('http://localhost:5000/edit_post', {
+    var response = await axios.get('https://photo-pro.herokuapp.com//edit_post', {
       params: {
         image_id: props.imageID,
         title: titleValidated[1],

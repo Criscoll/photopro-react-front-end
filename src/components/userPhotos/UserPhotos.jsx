@@ -49,7 +49,7 @@ const UserPhotos = (props) => {
     window.scrollTo(0, 0);
 
     axios({
-      url: 'http://localhost:5000/get_user_username',
+      url: 'https://photo-pro.herokuapp.com//get_user_username',
       params: { user_id: userID },
     }).then((response) => {
       // if (response.data.result) {
@@ -80,7 +80,7 @@ const UserPhotos = (props) => {
 
     axios({
       method: 'GET',
-      url: 'http://localhost:5000/profile_photos',
+      url: 'https://photo-pro.herokuapp.com//profile_photos',
       params: { user_id: userID, batch_size: 5, last_id: last_id },
       cancelToken: new axios.CancelToken(
         (c) => (cancelAxiosRequest.current = c)

@@ -26,7 +26,7 @@ export default function ReplyComment(props) {
   const deleteComment = (commentID) => {
     axios({
       method: "POST",
-      url: "http://localhost:5000/post_delete_comment",
+      url: "https://photo-pro.herokuapp.com//post_delete_comment",
       params: { comment_id: commentID },
     }).then((response) => {
       if (response.data.result) {

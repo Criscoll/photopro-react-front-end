@@ -45,7 +45,7 @@ function Toolbar() {
 
   useEffect(() => {
     axios({
-      url: 'http://localhost:5000/get_user_username',
+      url: 'https://photo-pro.herokuapp.com//get_user_username',
       params: { user_id: localStorage.getItem('userID') },
     }).then((response) => {
       if (response.data.result) {

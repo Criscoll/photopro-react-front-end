@@ -55,7 +55,7 @@ const Feed = (props) => {
       console.log(`called get_global_recommendations with score ${paramScore}`);
       axios({
         method: 'GET',
-        url: 'http://localhost:5000/get_global_recommendations',
+        url: 'https://photo-pro.herokuapp.com//get_global_recommendations',
         params: { score: paramScore, batch_size: 10 }, //user_id: 1
         cancelToken: new axios.CancelToken(
           (c) => (cancelAxiosRequest.current = c)
@@ -82,7 +82,7 @@ const Feed = (props) => {
     } else {
       axios({
         method: 'GET',
-        url: 'http://localhost:5000/discovery',
+        url: 'https://photo-pro.herokuapp.com//discovery',
         params: { query: term, batch_size: 10 }, //user_id: 1
         cancelToken: new axios.CancelToken(
           (c) => (cancelAxiosRequest.current = c)

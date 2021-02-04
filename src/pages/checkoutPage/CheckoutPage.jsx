@@ -42,7 +42,7 @@ export default function CheckoutPage(props) {
     const getUserNotPurchasedItems = () => {
       axios({
         method: 'GET',
-        url: 'http://localhost:5000/get_user_purchases',
+        url: 'https://photo-pro.herokuapp.com//get_user_purchases',
         params: {
           save_for_later: 0,
           purchased: 0,
@@ -61,7 +61,7 @@ export default function CheckoutPage(props) {
     const updatePurchase = (img_id) => {
       axios({
         method: 'POST',
-        url: 'http://localhost:5000/update_user_purchases_details',
+        url: 'https://photo-pro.herokuapp.com//update_user_purchases_details',
         params: {
           save_for_later: 0,
           purchased: 1,

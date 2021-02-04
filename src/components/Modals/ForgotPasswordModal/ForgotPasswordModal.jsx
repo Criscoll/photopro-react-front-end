@@ -47,7 +47,7 @@ export default function ForgotPassword(props) {
     setLoading(true);
     axios({
       method: 'POST',
-      url: 'http://localhost:5000/forgot_password_get_change_password_link',
+      url: 'https://photo-pro.herokuapp.com//forgot_password_get_change_password_link',
       params: {
         email: email,
       },
@@ -69,7 +69,7 @@ export default function ForgotPassword(props) {
   const forgotPasswordCodeSubmit = () => {
     axios({
       method: 'POST',
-      url: 'http://localhost:5000/reset_password',
+      url: 'https://photo-pro.herokuapp.com//reset_password',
       params: {
         email: enteredEmail,
         new_password: enteredNewPassword,

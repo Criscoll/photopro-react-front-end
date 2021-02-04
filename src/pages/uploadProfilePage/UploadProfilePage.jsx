@@ -24,7 +24,7 @@ export default function UploadProfilePage(props) {
     form_data.append('image', img);
 
     const response = await axios.post(
-      'http://localhost:5000/post_profile_photo',
+      'https://photo-pro.herokuapp.com//post_profile_photo',
       form_data
     );
     return response;
@@ -33,7 +33,7 @@ export default function UploadProfilePage(props) {
   const deleteProfilePhoto = () => {
     axios({
       method: 'POST',
-      url: 'http://localhost:5000/delete_profile_photo',
+      url: 'https://photo-pro.herokuapp.com//delete_profile_photo',
     }).then((response) => {
       console.log(response);
       const postPhotoResponse = postProfilePhoto();

@@ -18,7 +18,7 @@ function ProfilePage(props) {
   const getProfilePhoto = (ID) => {
     axios({
       method: 'GET',
-      url: 'http://localhost:5000/get_profile_photo',
+      url: 'https://photo-pro.herokuapp.com//get_profile_photo',
       params: {
         user_id: ID,
       },
