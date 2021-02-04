@@ -56,7 +56,7 @@ const Feed = (props) => {
       axios({
         method: 'GET',
         url: 'https://photo-pro.herokuapp.com//get_global_recommendations',
-        params: { score: paramScore, batch_size: 10 }, //user_id: 1
+        params: { score: paramScore, batch_size: 7 }, //user_id: 1
         cancelToken: new axios.CancelToken(
           (c) => (cancelAxiosRequest.current = c)
         ),
